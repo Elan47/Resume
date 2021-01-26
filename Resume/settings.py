@@ -26,8 +26,7 @@ SECRET_KEY = '7r7bn71r&wn&aj0$8urui+petan@i7*6kyzc)0azr-8cb@colr'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,7 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'django_summernote',
+    'colorfield',
+
 ]
+
+# Summernote
+# INSTALLED_APPS += ('django_summernote', )
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -120,3 +125,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [  os.path.join(BASE_DIR,'static') ]
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

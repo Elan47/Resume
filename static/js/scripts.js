@@ -1,8 +1,8 @@
 //   all ------------------
-function initSolonick() {
+function initElan() {
     "use strict";
     //   loader ------------------
-    $(".pin").text("Loading");
+    $(".pin").text("loading");
     $(".loader-wrap").fadeOut(300, function () {
         $("#main").animate({
             opacity: "1"
@@ -598,7 +598,7 @@ function initSolonick() {
     videoint();
     // Share   ------------------
     $(".share-container").share({
-        networks: ['facebook', 'pinterest', 'googleplus', 'twitter', 'linkedin']
+        networks: ['facebook','twitter', 'linkedin']
     });
     var shrcn = $(".share-wrapper"),
         ssb = $(".showshare");
@@ -821,5 +821,5 @@ function initparallax() {
 //   Init All ------------------
 $(function () {
     initparallax();
-    initSolonick();
+    initElan();
 });
