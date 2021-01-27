@@ -11,10 +11,10 @@
         <meta name="keywords" content=""/>
         <meta name="description" content=""/>
         <!--=============== css  ===============-->
-        <link type="text/css" rel="stylesheet" href="{% static 'css/reset.css' %}">
-        <link type="text/css" rel="stylesheet" href="{% static 'css/plugins.css' %}">
-        <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
-        {% comment %} <link type="text/css" rel="stylesheet" href="{% static 'css/color.css' %}"> {% endcomment %}
+        <link type="text/css" rel="stylesheet" href="{% static 'resume/css/reset.css' %}">
+        <link type="text/css" rel="stylesheet" href="{% static 'resume/css/plugins.css' %}">
+        <link type="text/css" rel="stylesheet" href="{% static 'resume/css/style.css' %}">
+        {% comment %} <link type="text/css" rel="stylesheet" href="{% static 'resume/css/color.css' %}"> {% endcomment %}
 
         <style>
         
@@ -304,7 +304,7 @@
                     <!-- section end-->
                     <!-- section-->
                     <section class="parallax-section dark-bg sec-half parallax-sec-half-right" data-scrollax-parent="true">
-                        <div class="bg par-elem"  data-bg="{% static 'images/bg/6.jpg'%}" data-scrollax="properties: { translateY: '30%' }"></div>
+                        <div class="bg par-elem"  data-bg="{% static 'resume/images/bg/6.jpg'%}" data-scrollax="properties: { translateY: '30%' }"></div>
                         <div class="overlay"></div>
                         <div class="container">
                             <div class="section-title">
@@ -353,7 +353,7 @@
                                         <div class="col-md-4">
                                             <div class="custom-inner-header workres">
                                                 {{exp.icon | safe}}
-                                                <h3>{{exp.company}}"</h3>
+                                                <h3>{{exp.company|safe}}"</h3>
                                                 <span>{{exp.year}}</span>
                                             </div>
                                             <div class="ci-num"><span>0{{exp.count}}. -</span></div>
@@ -363,7 +363,7 @@
                                             <div class="custom-inner-content fl-wrap">
                                                 <h4>{{exp.title | safe}}</h4>
                                                 {{exp.desc | safe}}
-                                                <a href="{{exp.btn_url}}" class="cus-inner-head-link color-bg">{{exp.btn_text}}</a>
+                                                <a href="{{exp.btn_url}}" class="cus-inner-head-link color-bg">{{exp.btn_text|safe}}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -392,7 +392,7 @@
                                     <div class="video-promo-text fl-wrap mar-top">
                                         <h3>{{resume.vhead | safe}}  </h3>
                                         <p>{{resume.vdesc | safe}}</p>
-                                        <a href="{{resume.vbtn_link}}" class="btn float-btn flat-btn color-btn mar-top">{{resume.vbtn_text}}</a>
+                                        <a href="{{resume.vbtn_link}}" class="btn float-btn flat-btn color-btn mar-top">{{resume.vbtn_text|safe}}</a>
                                     </div>
                                 </div>
                             </div>
@@ -472,8 +472,8 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="pr-title fl-wrap">
-                                            <h3>{{set.head}}</h3>
-                                            <span>{{set.desc}}</span>
+                                            <h3>{{set.head|safe}}</h3>
+                                            <span>{{set.desc|safe}}</span>
                                         </div>
                                         <div class="ci-num"><span>0{{set.count}}. - </span></div>
                                     </div>
@@ -770,9 +770,9 @@
         </div>
         <!-- Main end -->
         <!--=============== scripts  ===============-->
-        <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/plugins.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+        <script type="text/javascript" src="{% static 'resume/js/jquery.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'resume/js/plugins.js' %}"></script>
+        <script type="text/javascript" src="{% static 'resume/js/scripts.js' %}"></script>
        
     </body>
 
