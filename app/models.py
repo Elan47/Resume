@@ -142,6 +142,8 @@ class About(models.Model):
     #Fact
     fact_title = models.TextField()
     fact_desc = models.TextField()
+    fact_image = models.ImageField(upload_to='images/about/fact', height_field=None, width_field=None, max_length=100)
+    
 
     def __str__(self):
         return self.name
